@@ -1,0 +1,153 @@
+.page {
+  min-height: 80vh;
+  background-color: transparent;
+  padding: 1rem;
+  font-family: 'Geist', 'Segoe UI', sans-serif;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.imageWrapper {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #F9F4F5;
+  border: 1px solid #E8C3C5;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.formColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.actions {
+  margin-top: 0.25rem;
+}
+
+.btnDelete {
+  width: 100%;
+  padding: 10px;
+  background: #F9F4F5;
+  color: #d0423a;
+  border: 1px solid #E8C3C5;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnDelete:hover {
+  background: #F0DADC;
+}
+
+.error {
+  font-size: 13px;
+  color: #d0423a;
+  min-height: 18px;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.toastBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: 'Geist', 'Segoe UI', sans-serif;
+  padding: 0.75rem 0.5rem;
+}
+
+.toastText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111111;
+  margin: 0;
+}
+
+.toastActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.toastConfirm {
+  padding: 10px 24px;
+  background: #E8C3C5;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.toastConfirm:hover {
+  background: #C9989B;
+}
+
+.toastCancel {
+  padding: 10px 24px;
+  background: #F9F4F5;
+  color: #555555;
+  border: 1px solid #E8C3C5;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.toastCancel:hover {
+  background: #F0DADC;
+}
+
+.link {
+  color: #C9989B;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #E8C3C5
+}
+
+.link:active {
+  color: #E8C3C5
+}

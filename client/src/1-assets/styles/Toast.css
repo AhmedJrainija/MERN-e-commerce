@@ -1,0 +1,11 @@
+.Toastify__progress-bar--success {
+  background: #E8C3C5 !important;
+}
+
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: #E8C3C5 !important;
+}
+
+.Toastify__toast-container--top-right {
+  top: 10px !important;
+}

@@ -1,0 +1,87 @@
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+}
+
+.page {
+  min-height: 80vh;
+  background-color: transparent;
+  padding: 1rem;
+  font-family: 'Geist', 'Segoe UI', sans-serif;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.imageWrapper {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #F9F4F5;
+  border: 1px solid #E8C3C5;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.formColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.uploadPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  color: #C49A9D;
+}
+
+.uploadPlaceholder svg {
+  width: 40px;
+  height: 40px;
+  stroke: #E8C3C5;
+}
+
+.uploadPlaceholder span {
+  font-size: 20px;
+  color: #C49A9D;
+}
+
+.link {
+  color: #C9989B;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #E8C3C5
+}
+
+.link:active {
+  color: #E8C3C5
+}

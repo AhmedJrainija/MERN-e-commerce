@@ -1,0 +1,286 @@
+.page {
+  min-height: 80vh;
+  background-color: transparent;
+  padding: 1rem;
+  font-family: 'Geist', 'Segoe UI', sans-serif;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 1.5rem;
+  align-items: start;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.cartColumn {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Cart panel ── */
+.cartPanel {
+  border: 1px solid #E8C3C5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: #F9F4F5;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imageWrapper {
+  display: inline-flex;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.imageWrapper:hover {
+  opacity: 0.75;
+}
+
+.cartImage {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #E8C3C5;
+}
+
+.cartItem p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.total {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111;
+  margin: 0;
+  border-top: 1px solid #E8C3C5;
+  padding-top: 0.75rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .page {
+    padding: 1.5rem 1rem;
+  }
+
+  .panels {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cartColumn {
+    max-width: 100%;
+  }
+}
+
+.nameLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nameLink:hover {
+  color: #C9989B;
+}
+
+/* ── Right: summary panel ── */
+.summaryPanel {
+  background: #F9F4F5;
+  border: 1px solid #E8C3C5;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.summaryTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555555;
+}
+
+.status {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #F0DADC;
+  color: #C9989B;
+  border: 1px solid #E8C3C5;
+}
+
+.status.statusPending   { background: #F9F4F5; color: #C9989B; border-color: #E8C3C5; }
+.status.statusConfirmed { background: #e8f4ec; color: #3aaa6e; border-color: #b6dfc4; }
+.status.statusShipped   { background: #e8f0fb; color: #4a7fd4; border-color: #b3caf0; }
+.status.statusDelivered { background: #f0fce8; color: #5ab330; border-color: #c2e8a0; }
+.status.statusCancelled { background: #fdf0f0; color: #d0423a; border-color: #f0c0bc; }
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.btnStatus {
+  padding: 6px 14px;
+  background: #E8C3C5;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.btnStatus:hover {
+  background: #C9989B;
+}
+
+.btnStatus:active {
+  transform: scale(0.99);
+}
+
+.btnCancel {
+  padding: 6px 14px;
+  background: #F9F4F5;
+  color: #d0423a;
+  border: 1px solid #E8C3C5;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btnCancel:hover {
+  background: #F0DADC;
+}
+
+
+.divider {
+  height: 1px;
+  background: #E8C3C5;
+}
+
+.toastBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: 'Geist', 'Segoe UI', sans-serif;
+  padding: 0.75rem 0.5rem;
+}
+
+.toastText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111111;
+  margin: 0;
+}
+
+.toastActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.toastConfirm {
+  padding: 10px 24px;
+  background: #E8C3C5;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.toastConfirm:hover {
+  background: #C9989B;
+}
+
+.toastCancel {
+  padding: 10px 24px;
+  background: #F9F4F5;
+  color: #555555;
+  border: 1px solid #E8C3C5;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.toastCancel:hover {
+  background: #F0DADC;
+}
+
+.link {
+  color: #C9989B;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #E8C3C5
+}
+
+.link:active {
+  color: #E8C3C5
+}

@@ -1,0 +1,192 @@
+/*
+  Color palette used:
+  --main:        #F8C4E2  (primary pink)
+  --dark:        #E A8FC8  (darker shade — border, badge text)
+  --deeper:      #D45FA0  (deepest shade — active states)
+  --light:       #FDE8F4  (lightest tint — hover backgrounds)
+  --white:       #ffffff
+*/
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8C4E2;
+  border-bottom: 1px solid #E89FC8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  padding: 0 24px;
+  z-index: 300;
+  font-family: 'Geist', 'Segoe UI', sans-serif;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+}
+
+.loggedContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.userContainer {
+  position: relative;
+}
+
+.userIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  transition: opacity 0.15s;
+}
+
+.userIcon svg {
+  color: #ffffff;
+  stroke: #ffffff;
+  stroke-width: 2.2px;
+  fill: none;
+}
+
+.userIcon:hover {
+  opacity: 0.75;
+}
+
+.popupMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 180px;
+  background: #ffffff;
+  border: 1px solid #F0D0E8;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 4px;
+  z-index: 400;
+}
+
+.cartContainer {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  transition: opacity 0.15s;
+}
+
+.cartContainer svg {
+  color: #ffffff;
+  stroke: #ffffff;
+  stroke-width: 2.2px;
+  fill: none;
+}
+
+.cartContainer:hover {
+  opacity: 0.75;
+}
+
+.cartSize {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ffffff;
+  color: #E89FC8;
+  font-size: 9px;
+  font-weight: 600;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  color: #333333;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.12s;
+}
+
+.button:hover {
+  background: #FDE8F4;
+}
+
+.button:active {
+  background: #F8C4E2;
+}
+
+.loginIcon,
+.logoutIcon {
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.15s, opacity 0.15s;
+}
+
+.loginIcon:hover,
+.logoutIcon:hover {
+  color: #ffffff;
+  opacity: 0.75;
+}
+
+.dashboardIcon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  transition: opacity 0.15s;
+}
+
+.dashboardIcon svg {
+  stroke: #ffffff;
+  stroke-width: 2.2px;
+  fill: none;
+}
+
+.dashboardIcon:hover {
+  opacity: 0.75;
+}

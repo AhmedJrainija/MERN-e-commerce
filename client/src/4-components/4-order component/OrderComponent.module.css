@@ -1,0 +1,101 @@
+.card {
+  background: #F9F4F5;
+  border: 1px solid #E8C3C5;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-family: 'Geist', 'Segoe UI', sans-serif;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.date {
+  font-size: 13px;
+  color: #444444;
+  margin: 0;
+}
+
+.status {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #F0DADC;
+  color: #C9989B;
+  border: 1px solid #E8C3C5;
+}
+
+.status.statusPending   { background: #F9F4F5; color: #C9989B; border-color: #E8C3C5; }
+.status.statusConfirmed { background: #e8f4ec; color: #3aaa6e; border-color: #b6dfc4; }
+.status.statusShipped   { background: #e8f0fb; color: #4a7fd4; border-color: #b3caf0; }
+.status.statusDelivered { background: #f0fce8; color: #5ab330; border-color: #c2e8a0; }
+.status.statusCancelled { background: #fdf0f0; color: #d0423a; border-color: #f0c0bc; }
+
+.divider {
+  height: 1px;
+  background: #E8C3C5;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item {
+  font-size: 13px;
+  color: #444444;
+  margin: 0;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.itemQty {
+  color: #888888;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.25rem;
+}
+
+.address {
+  font-size: 12px;
+  color: #444444;
+  margin: 0;
+}
+
+.total {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111111;
+  margin: 0;
+}
+
+.nameLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nameLink:hover {
+  color: #C9989B;
+}
