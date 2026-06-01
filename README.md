@@ -175,6 +175,7 @@ project-root/
 │
 ├── server/
 │   ├── src/
+│   ├── public/
 │   ├── package.json
 │   └── .env
 │
@@ -248,8 +249,8 @@ DB_URL=mongodb://127.0.0.1:27017/eCommerce
 ADMIN_EMAIL=your_admin_email
 ADMIN_PASSWORD=your_admin_password
 
-ACCESS_TOKEN_SECRET=access_secret
-REFRESH_TOKEN_SECRET=refresh_secret
+ACCESS_TOKEN_SECRET=your_access_secret
+REFRESH_TOKEN_SECRET=your_refresh_secret
 ```
 
 
