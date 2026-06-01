@@ -94,7 +94,7 @@ next: NextFunction)
       httpOnly: true,
       secure: true,
       sameSite: "none",
-      maxAge: 15 * 60 * 1000,
+      maxAge: 1 * 60 * 1000,
     });
 
     res.cookie("refreshToken", clientRefreshToken, {
