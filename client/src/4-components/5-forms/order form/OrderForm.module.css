@@ -50,12 +50,6 @@
   box-shadow: 0 0 0 3px rgba(232, 195, 197, 0.2);
 }
 
-.divider {
-  height: 1px;
-  background: #E8C3C5;
-  margin: 0.25rem 0;
-}
-
 .btn {
   width: 100%;
   padding: 10px;

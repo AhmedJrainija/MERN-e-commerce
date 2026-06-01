@@ -37,13 +37,6 @@
   flex-direction: column;
 }
 
-.panelTitle {
-  font-size: 20px;
-  font-weight: 600;
-  color: #111111;
-  margin: 0;
-}
-
 /* ── Cart panel ── */
 .cartPanel {
   border: 1px solid #E8C3C5;

@@ -25,42 +25,6 @@ body {
   gap: 1.5rem;
 }
 
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.filter {
-  padding: 6px 14px;
-  background: #F9F4F5;
-  border: 1px solid #E8C3C5;
-  border-radius: 20px;
-  font-size: 12px;
-  font-family: inherit;
-  color: #555555;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
-}
-
-.filter:hover {
-  background: #F0DADC;
-  border-color: #E8C3C5;
-  color: #C9989B;
-}
-
-.filterActive {
-  background: #E8C3C5;
-  color: #ffffff;
-  border-color: #E8C3C5;
-}
-
-.filterActive:hover {
-  background: #C9989B;
-  color: #ffffff;
-  border-color: #C9989B;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -157,20 +121,6 @@ body {
   font-size: 13px;
   font-weight: 600;
   color: #444444;
-  margin: 0;
-}
-
-.empty {
-  font-size: 14px;
-  color: #888888;
-  text-align: center;
-  padding: 4rem 0;
-}
-
-.error {
-  font-size: 13px;
-  color: #d0423a;
-  min-height: 18px;
   margin: 0;
 }
 

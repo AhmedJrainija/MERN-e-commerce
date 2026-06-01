@@ -1,5 +1,5 @@
 .root {
-  min-height: 100vh; /* change from 80vh to 100vh */
+  min-height: 100vh;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -25,11 +25,10 @@
   flex: 1;
   min-width: 0;
   background: #F9F4F5;
-  padding: 2.5rem 2rem; /* equal top and bottom */
+  padding: 2.5rem 2rem;
   padding-top: 0rem;
   display: flex;
   flex-direction: column;
-
 }
 
 .heading {
@@ -38,12 +37,6 @@
   color: #111111;
   margin: 0 0 0.3rem;
   letter-spacing: -0.03em;
-}
-
-.subheading {
-  font-size: 14px;
-  color: #999999;
-  margin: 0 0 1.75rem;
 }
 
 .row {
@@ -106,28 +99,6 @@
 
 .btnPrimary:active {
   transform: scale(0.99);
-}
-
-.footer {
-  text-align: center;
-  margin-top: 1.25rem;
-}
-
-.link {
-  font-size: 13px;
-  color: #C9989B;
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
-
-.error {
-  font-size: 13px;
-  color: #d0423a;
-  margin-top: 0.75rem;
-  min-height: 18px;
 }
 
 /* ── Right: image panel ── */

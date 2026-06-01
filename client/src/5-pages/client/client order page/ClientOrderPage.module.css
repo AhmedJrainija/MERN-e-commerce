@@ -174,27 +174,6 @@
   gap: 1rem;
 }
 
-.btnStatus {
-  padding: 6px 14px;
-  background: #E8C3C5;
-  color: #ffffff;
-  border: none;
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background 0.15s, transform 0.1s;
-}
-
-.btnStatus:hover {
-  background: #C9989B;
-}
-
-.btnStatus:active {
-  transform: scale(0.99);
-}
-
 .btnCancel {
   padding: 6px 14px;
   background: #F9F4F5;
@@ -211,7 +190,6 @@
 .btnCancel:hover {
   background: #F0DADC;
 }
-
 
 .divider {
   height: 1px;

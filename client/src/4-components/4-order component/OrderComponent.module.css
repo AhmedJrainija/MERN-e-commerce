@@ -62,10 +62,6 @@
   margin: 0;
 }
 
-.itemQty {
-  color: #888888;
-}
-
 .footer {
   display: flex;
   align-items: center;
@@ -84,18 +80,4 @@
   font-weight: 600;
   color: #111111;
   margin: 0;
-}
-
-.nameLink {
-  font-size: 14px;
-  font-weight: 500;
-  color: #111111;
-  text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.nameLink:hover {
-  color: #C9989B;
 }

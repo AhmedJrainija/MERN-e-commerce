@@ -50,35 +50,6 @@
   flex-direction: column;
 }
 
-.actions {
-  margin-top: 0.25rem;
-}
-
-.btnDelete {
-  width: 100%;
-  padding: 10px;
-  background: #F9F4F5;
-  color: #d0423a;
-  border: 1px solid #E8C3C5;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-
-.btnDelete:hover {
-  background: #F0DADC;
-}
-
-.error {
-  font-size: 13px;
-  color: #d0423a;
-  min-height: 18px;
-  margin: 0;
-}
-
 @media (max-width: 700px) {
   .layout {
     grid-template-columns: 1fr;
