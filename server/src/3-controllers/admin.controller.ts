@@ -52,7 +52,7 @@ export const loginAdmin = async (
       secure: true,
       sameSite: "none",
       maxAge: 15 * 60 * 1000,
-    });
+    }); 
 
     res.cookie("refreshToken", adminRefreshToken, {
       httpOnly: true,
@@ -60,7 +60,7 @@ export const loginAdmin = async (
       sameSite: "none",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
-    
+
     res.status(200).json({
       success: true,
       message: "Welcome Admin",
