@@ -1,19 +1,25 @@
 import multer, { FileFilterCallback } from 'multer';
 import { Request } from 'express';
 import { AppError } from '../8-utils/custom error class.js';
+import { v2 as cloudinary } from 'cloudinary';
+import { CloudinaryStorage } from 'multer-storage-cloudinary';
+import { env } from '../1-config/env.js';
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "public/products/");
-  },
-
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + "-" + file.originalname);
-  }
+cloudinary.config({
+  cloud_name: env.CLOUDINARY_CLOUD_NAME,
+  api_key: env.CLOUDINARY_API_KEY,
+  api_secret: env.CLOUDINARY_API_SECRET,
 });
 
-const fileFilter = (  req: Request, file: Express.Multer.File, cb: FileFilterCallback) => {
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'harmony/products',
+    allowed_formats: ['jpg', 'jpeg', 'png'],
+  } as any,
+});
 
+const fileFilter = (req: Request, file: Express.Multer.File, cb: FileFilterCallback) => {
   const allowed = ["image/jpeg", "image/png"];
 
   if (!allowed.includes(file.mimetype)) {
@@ -23,11 +29,11 @@ const fileFilter = (  req: Request, file: Express.Multer.File, cb: FileFilterCal
   cb(null, true);
 };
 
-export const upload = multer({storage: storage, 
+export const upload = multer({
+  storage: storage,
   fileFilter: fileFilter,
   limits: {
-    fileSize: 5 * 1024 * 1024,  // 5MB
-    files: 1,                   // Max 3 files
-    //fields: 2,                  // Max 2 fields (file input fields)
+    fileSize: 5 * 1024 * 1024,
+    files: 1,
   }
-  })
+});

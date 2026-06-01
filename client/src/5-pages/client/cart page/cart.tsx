@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-const BASE_URL = import.meta.env.VITE_API_URL;
 import { Link, useNavigate } from "react-router-dom";
 import { ChevronRight, Minus, Plus, X } from "lucide-react";
 import styles from "./CartPage.module.css";
@@ -69,7 +68,7 @@ export function Cart() {
                     <Link to={`/product/${item._id}`} className={styles.imageWrapper}>
                       <img
                         className={styles.image}
-                        src={`${BASE_URL}/products/${item.pictureName}`}
+                        src={item.pictureName}
                         crossOrigin="use-credentials"
                         alt={item.productName}
                       />

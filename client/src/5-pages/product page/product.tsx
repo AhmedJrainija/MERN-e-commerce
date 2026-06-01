@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-const BASE_URL = import.meta.env.VITE_API_URL;
 import { ShoppingCart } from "lucide-react";
 import styles from "./ProductPage.module.css";
 import { toast } from 'react-toastify';
@@ -58,7 +57,7 @@ export function ProductPage() {
             <div className={styles.imageWrapper}>
               <img
                 className={styles.image}
-                src={`${BASE_URL}/products/${data.pictureName}`}
+                src={data.pictureName}
                 crossOrigin="use-credentials"
                 alt={data.productName}
               />

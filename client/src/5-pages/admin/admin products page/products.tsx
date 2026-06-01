@@ -79,7 +79,7 @@ export function ProductsAdmin() {
                 <Link to={`/admin/product/${product._id}`} className={styles.imageLink}>
                   <img
                     className={styles.image}
-                    src={`${BASE_URL}/products/${product.pictureName}`}
+                    src={product.pictureName}
                     crossOrigin="use-credentials"
                     alt={product.productName}
                   />

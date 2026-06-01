@@ -12,7 +12,10 @@ const getEnv = (): EnvConfig => {
     ADMIN_EMAIL,
     ADMIN_PASSWORD,
     ACCESS_TOKEN_SECRET,
-    REFRESH_TOKEN_SECRET
+    REFRESH_TOKEN_SECRET,
+    CLOUDINARY_CLOUD_NAME,
+    CLOUDINARY_API_KEY,
+    CLOUDINARY_API_SECRET
   } = process.env
 
   if (!PORT) throw new AppError("Server configuration error: PORT is not defined", 500);
@@ -27,6 +30,11 @@ const getEnv = (): EnvConfig => {
 
   if (!REFRESH_TOKEN_SECRET) throw new AppError("Server configuration error: Refresh token secret is not defined", 500);
 
+  if (!CLOUDINARY_CLOUD_NAME) throw new AppError("Server configuration error: Cloudinary cloud name is not defined", 500);
+
+  if (!CLOUDINARY_API_KEY) throw new AppError("Server configuration error: Cloudinary API key is not defined", 500);
+
+  if (!CLOUDINARY_API_SECRET) throw new AppError("Server configuration error: Cloudinary API secret is not defined", 500);
 
   return {
     PORT: Number(PORT),
@@ -34,7 +42,10 @@ const getEnv = (): EnvConfig => {
     ADMIN_EMAIL,
     ADMIN_PASSWORD,
     ACCESS_TOKEN_SECRET,
-    REFRESH_TOKEN_SECRET
+    REFRESH_TOKEN_SECRET,
+    CLOUDINARY_CLOUD_NAME,
+    CLOUDINARY_API_KEY,
+    CLOUDINARY_API_SECRET
   }
 }
 

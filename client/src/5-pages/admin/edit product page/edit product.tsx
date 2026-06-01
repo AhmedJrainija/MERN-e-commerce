@@ -10,8 +10,6 @@ import { getErrorMessage } from "../../../8-utils/error";
 import { ProductForm } from "../../../4-components/5-forms/product form/product form";
 import { ChevronRight } from "lucide-react";
 
-const BASE_URL = import.meta.env.VITE_API_URL;
-
 export function EditProduct() {
   const { productId } = useParams();
   const { product, setProduct, handleSubmit, click } = useProductForm("patch", `/admin/product/${productId}`);
@@ -27,7 +25,7 @@ export function EditProduct() {
         const res: ApiResponse<ProductDTO & {inOrders: boolean}> = response.data;
         const p = res.data;
         setData(p);
-        setPreview(`${BASE_URL}/products/${p.pictureName}`);
+        setPreview(`${p.pictureName}`);
         setProduct({ productName: p.productName, price: p.price, stock: p.stock, description: p.description, category: p.category, image: null });
       } catch (error) {
         if (!toast.isActive('error-toast')) {

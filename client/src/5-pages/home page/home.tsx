@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-const BASE_URL = import.meta.env.VITE_API_URL;
 import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
 import styles from "./HomePage.module.css";
 import { toast } from 'react-toastify';
@@ -78,7 +77,7 @@ export function Home() {
                 <Link to={`/product/${product._id}`} className={styles.imageLink}>
                   <img
                     className={styles.image}
-                    src={`${BASE_URL}/products/${product.pictureName}`}
+                    src={product.pictureName}
                     crossOrigin="use-credentials"
                     alt={product.productName}
                   />

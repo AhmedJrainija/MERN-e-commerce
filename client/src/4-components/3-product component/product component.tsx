@@ -6,7 +6,7 @@ export function Product(props: ProductDTO) {
 
   return (
     <div>
-      <img src={`${BASE_URL}/products/${props.pictureName}`} crossOrigin="use-credentials" />
+      <img src={props.pictureName}crossOrigin="use-credentials" />
       <p>{props.price.toFixed(2)} MAD</p>
     </div>
   )

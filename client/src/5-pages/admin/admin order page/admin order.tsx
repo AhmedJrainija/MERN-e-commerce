@@ -114,7 +114,7 @@ export function OrderPage() {
                 <div key={item.productName} className={styles.cartItem}>
                   <Link to={`/product/${item._id}`} className={styles.imageWrapper}>
                     <img
-                      src={`${BASE_URL}/products/${item.pictureName}`}
+                      src={item.pictureName}
                       crossOrigin="use-credentials"
                       alt={item.productName}
                       className={styles.cartImage}

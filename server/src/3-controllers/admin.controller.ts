@@ -17,7 +17,7 @@ import mongoose from 'mongoose';
 import { FindOrderDTO, populatedOrderDTO } from '../7-types/dto/orderDTO.js';
 import { changeOrder, deleteOrder, findAllOrders, findOrder, findOrdersByProduct } from '../4-services/manageOrders.js';
 import { orderModel } from '../2-models/order.model.js';
-
+import { v2 as cloudinary } from 'cloudinary';
 
 
 export const loginAdmin = async (
@@ -174,16 +174,14 @@ export const addProduct = async (
 
 
 export const deleteProduct = async (
-req: Request<ProductParams>,
-res: Response<ApiVoidResponse>,
-next: NextFunction
+  req: Request<ProductParams>,
+  res: Response<ApiVoidResponse>,
+  next: NextFunction
 ): Promise<void> => {
-
   const session = await mongoose.startSession();
   session.startTransaction();
-  try{
-
-    const {productId} = req.params;
+  try {
+    const { productId } = req.params;
 
     await clientModel.updateMany(
       { [`cart.${productId}`]: { $exists: true } },
@@ -197,17 +195,19 @@ next: NextFunction
       { session }
     );
 
-    if(orders.length > 0) throw new AppError('Product is in orders', 400);
+    if (orders.length > 0) throw new AppError('Product is in orders', 400);
 
-    const productDeleted:ProductDTO | null = await ProductModel.findByIdAndDelete(productId, { session }).lean();
+    const productDeleted: ProductDTO | null = await ProductModel.findByIdAndDelete(productId, { session }).lean();
 
-    if(!productDeleted) {
+    if (!productDeleted) {
       throw new AppError("Product not found", 404);
     }
 
-    const fullPath = path.join(process.cwd(), "public", "products", productDeleted.pictureName);
-
-    await fs.unlink(fullPath);
+    // Delete image from Cloudinary
+    if (productDeleted.pictureName) {
+      const publicId = productDeleted.pictureName.split('/').slice(-1)[0].split('.')[0];
+      await cloudinary.uploader.destroy(`harmony/products/${publicId}`).catch(() => {});
+    }
 
     await session.commitTransaction();
 
@@ -216,11 +216,10 @@ next: NextFunction
       message: "Product deleted"
     });
 
-  } catch(error) {
+  } catch (error) {
     await session.abortTransaction();
-    next(error)
-
-  } finally{
+    next(error);
+  } finally {
     await session.endSession();
   }
 }
@@ -232,24 +231,19 @@ export const updateProduct = async (
   next: NextFunction
 ): Promise<void> => {
   try {
-
-    const {productId} = req.params;
-
+    const { productId } = req.params;
     const data = req.body;
-
     const file = req.file;
 
     const product = await ProductModel.findById(productId);
-  
+
     if (!product) {
       if (file) {
-        const newPath = path.join(process.cwd(), "public", "products", file.filename);
-        await fs.unlink(newPath).catch(() => {});
+        await cloudinary.uploader.destroy(file.filename).catch(() => {});
       }
       throw new AppError("Product not found", 404);
     }
 
-    
     const updatedProduct = await updatingProduct(data, product, file);
 
     res.status(200).json({
