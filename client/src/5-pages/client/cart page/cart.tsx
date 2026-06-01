@@ -4,7 +4,6 @@ import { ChevronRight, Minus, Plus, X } from "lucide-react";
 import styles from "./CartPage.module.css";
 import { toast } from "react-toastify";
 import type { ProductDTO } from "../../../7-types/dto/productDTO";
-import { useCart } from "../../../2-context/cartContext";
 import { useManageCart } from "../../../3-hooks/manage cart hook";
 import { api } from "../../../6-services/api";
 import type { ApiResponse } from "../../../7-types/response/response api";
@@ -15,9 +14,8 @@ import { CartSkeleton } from "./cart skeleton";
 
 export function Cart() {
   const [data, setData] = useState<ProductDTO[]>([]);
-  const { cart } = useCart();
   const navigate = useNavigate();
-  const { handleClick } = useManageCart();
+  const { handleClick, click } = useManageCart();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -35,7 +33,7 @@ export function Cart() {
       }
     }
     findCart();
-  }, [cart]);
+  }, [click]);
 
   if (loading) return <CartSkeleton/>;
 
