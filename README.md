@@ -121,7 +121,7 @@ Backend API: Not deployed yet
 
 ---
 
-## 📌 Key Features Overview   👈 ADD IT HERE
+## 📌 Key Features Overview
 
 - Separate client & admin system
 - Secure JWT authentication with refresh tokens
