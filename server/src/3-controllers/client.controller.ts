@@ -92,15 +92,15 @@ next: NextFunction)
 
     res.cookie("accessToken", clientAccessToken, {
       httpOnly: true,
-      secure: false, // true in production (HTTPS)
-      sameSite: "strict",
+      secure: true,
+      sameSite: "none",
       maxAge: 15 * 60 * 1000,
     });
 
     res.cookie("refreshToken", clientRefreshToken, {
       httpOnly: true,
-      secure: false, // true in production (HTTPS)
-      sameSite: "strict",
+      secure: true,
+      sameSite: "none",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
 
