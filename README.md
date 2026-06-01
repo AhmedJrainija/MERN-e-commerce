@@ -5,7 +5,7 @@ Harmony is a full-stack e-commerce web application built with React, TypeScript,
 
 ## 🚀 Live Demo
 
-Frontend: Not deployed yet
+Frontend: [Live](https://mern-e-commerce-henna-seven.vercel.app)
 
 Backend API: [Live](https://mern-e-commerce-production-7599.up.railway.app)
 
