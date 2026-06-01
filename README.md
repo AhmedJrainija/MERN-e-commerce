@@ -1,6 +1,6 @@
 # Harmony
 
-Harmony is a full-stack e-commerce web application built with React, TypeScript, Node.js, Express.js, MongoDB, and MySQL. The project demonstrates modern web development practices through features such as secure authentication, role-based authorization, product management, shopping cart functionality, order processing, pagination, and a responsive user interface.
+Harmony is a full-stack e-commerce web application built with React, TypeScript, Node.js, Express.js, MongoDB. The project demonstrates modern web development practices through features such as secure authentication, role-based authorization, product management, shopping cart functionality, order processing, pagination, and a responsive user interface.
 ---
 
 ## 🚀 Live Demo
@@ -85,39 +85,36 @@ Backend API: Not deployed yet
 
 ### Authentication & Authorization
 
-- [ ] User registration
-- [ ] User login
-- [ ] JWT authentication
-- [ ] Refresh tokens
-- [ ] Protected routes
-- [ ] Role-based authorization
+### Authentication & Authorization
+- [x] User registration
+- [x] User login
+- [x] JWT authentication
+- [x] Refresh tokens
+- [x] Protected routes
+- [x] Role-based authorization
 
 ### User Features
-
-- [ ] Browse products
-- [ ] Filter products
-- [ ] Pagination
-- [ ] View product details
+- [x] Browse products
+- [x] Filter products
+- [x] Pagination
+- [x] View product details
 
 ### Shopping Cart
-
-- [ ] Add products to cart
-- [ ] Remove products from cart
-- [ ] Update quantities
-- [ ] Persist cart
+- [x] Add products to cart
+- [x] Remove products from cart
+- [x] Update quantities
+- [x] Persist cart
 
 ### Orders
-
-- [ ] Place orders
-- [ ] View order history
-- [ ] Track order status
+- [x] Place orders
+- [x] View order history
+- [x] Track order status
 
 ### Admin Features
-
-- [ ] Create products
-- [ ] Update products
-- [ ] Delete products
-- [ ] Manage orders
+- [x] Create products
+- [x] Update products
+- [x] Delete products
+- [x] Manage orders
 
 ---
 
@@ -268,7 +265,7 @@ VITE_API_URL=http://localhost:3000
 ### Base URL
 
 ```text
-http://localhost:5137
+http://localhost:3000
 ```
 
 
