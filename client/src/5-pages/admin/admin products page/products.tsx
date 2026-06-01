@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-const BASE_URL = import.meta.env.VITE_API_URL;
 import { Link } from "react-router-dom";
 import styles from "./ProductsAdmin.module.css";
 import { toast } from "react-toastify";

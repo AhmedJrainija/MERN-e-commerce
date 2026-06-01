@@ -8,7 +8,6 @@ import { getErrorMessage } from "../../../8-utils/error";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ClientOrderPageSkeleton } from "../../client/client order page/client order skeleton";
 import { ChevronRight } from "lucide-react";
-const BASE_URL = import.meta.env.VITE_API_URL;
 
 export function OrderPage() {
   const [data, setData] = useState<orderDTO>();

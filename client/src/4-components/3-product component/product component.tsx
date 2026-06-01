@@ -1,5 +1,4 @@
 import type { ProductDTO } from "../../7-types/dto/productDTO";
-const BASE_URL = import.meta.env.VITE_API_URL;
 
 
 export function Product(props: ProductDTO) {
