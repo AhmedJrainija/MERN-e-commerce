@@ -15,9 +15,9 @@ export function useManageCart (){
     try{
 
       if(role === 'Client') {
-        await api[method](path);
-
         getCart((cart ?? 0) + quantity);
+        
+        await api[method](path);
 
       } else {
         navigate('/login');
