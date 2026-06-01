@@ -4,7 +4,6 @@ import { ChevronRight, Minus, Plus, X } from "lucide-react";
 import styles from "./CartPage.module.css";
 import { toast } from "react-toastify";
 import type { ProductDTO } from "../../../7-types/dto/productDTO";
-import { useCart } from "../../../2-context/cartContext";
 import { useManageCart } from "../../../3-hooks/manage cart hook";
 import { api } from "../../../6-services/api";
 import type { ApiResponse } from "../../../7-types/response/response api";
@@ -15,9 +14,7 @@ import { CartSkeleton } from "./cart skeleton";
 
 export function Cart() {
   const [data, setData] = useState<ProductDTO[]>([]);
-  const { cart } = useCart();
   const navigate = useNavigate();
-  const { handleClick } = useManageCart();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -28,16 +25,28 @@ export function Cart() {
         setData(result.data);
       } catch (error) {
         if (!toast.isActive('error-toast')) {
-          toast.error(getErrorMessage(error), { toastId: 'error-toast'});
+          toast.error(getErrorMessage(error), { toastId: 'error-toast' });
         }
-      }finally {
+      } finally {
         setLoading(false);
       }
     }
     findCart();
-  }, [cart]);
+  }, []);
 
-  if (loading) return <CartSkeleton/>;
+  const updateQuantity = (id: string, delta: number) => {
+    setData(prev =>
+      delta === 0
+        ? prev.filter(item => item._id !== id)
+        : prev.map(item =>
+            item._id === id ? { ...item, quantity: item.quantity + delta } : item
+          )
+    );
+  };
+
+  const { handleClick } = useManageCart(updateQuantity);
+
+  if (loading) return <CartSkeleton />;
 
   return (
     <div className={styles.page}>
@@ -45,7 +54,7 @@ export function Cart() {
 
         <h1 className={styles.title}>
           <Link to={'/'} className={styles.link}>Home</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
+          <ChevronRight style={{ color: '#C9989B', verticalAlign: 'middle' }} strokeWidth={2} size={25} />
           <Link className={styles.link} to={'/cart'}>Cart</Link>
         </h1>
 
@@ -80,13 +89,13 @@ export function Cart() {
                   <div className={styles.qtyCell}>
                     <button
                       className={item.quantity > 1 ? styles.qtyBtn : styles.qtyBtnHidden}
-                      onClick={() => item.quantity > 1 && handleClick(`/cart/${item._id}/substract`, "patch", -1)}
+                      onClick={() => item.quantity > 1 && handleClick(`/cart/${item._id}/substract`, "patch", -1, item._id)}
                     >
                       <Minus size={13} strokeWidth={2} />
                     </button>
                     <span className={styles.quantity}>{item.quantity}</span>
                     {item.stock
-                      ? <button className={styles.qtyBtn} onClick={() => handleClick(`/cart/${item._id}/add`, "patch", 1)}><Plus size={13} strokeWidth={2} /></button>
+                      ? <button className={styles.qtyBtn} onClick={() => handleClick(`/cart/${item._id}/add`, "patch", 1, item._id)}><Plus size={13} strokeWidth={2} /></button>
                       : <button className={styles.outStock} onClick={() => toast.error('Product is out of stock')}><Plus size={13} strokeWidth={2} /></button>
                     }
                   </div>
@@ -97,7 +106,7 @@ export function Cart() {
 
                   <button
                     className={styles.btnDelete}
-                    onClick={() => handleClick(`/cart/${item._id}`, "delete", -item.quantity)}
+                    onClick={() => handleClick(`/cart/${item._id}`, "delete", -item.quantity, item._id)}
                   >
                     <X size={15} strokeWidth={2} />
                   </button>
