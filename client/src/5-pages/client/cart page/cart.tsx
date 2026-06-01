@@ -15,7 +15,7 @@ import { CartSkeleton } from "./cart skeleton";
 
 export function Cart() {
   const [data, setData] = useState<ProductDTO[]>([]);
-  const { cart } = useCart();
+  const { refreshKey } = useCart();
   const navigate = useNavigate();
   const { handleClick } = useManageCart();
   const [loading, setLoading] = useState(true);
@@ -35,7 +35,7 @@ export function Cart() {
       }
     }
     findCart();
-  }, [cart]);
+  }, [refreshKey]);
 
   if (loading) return <CartSkeleton/>;
 

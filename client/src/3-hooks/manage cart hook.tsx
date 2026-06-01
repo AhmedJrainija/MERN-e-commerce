@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 
 export function useManageCart() {
-  const { getCart, cart } = useCart();
+  const { getCart, cart ,triggerRefresh} = useCart();
   const { role } = useAuth();
   const navigate = useNavigate();
 
@@ -24,12 +24,14 @@ export function useManageCart() {
     // ✅ Update UI immediately, don't wait for API
     const previousCart = cart ?? 0;
     getCart(previousCart + quantity);
+    triggerRefresh(); 
 
     try {
       await api[method](path);
     } catch (error) {
       // ✅ Roll back on failure
       getCart(previousCart);
+      triggerRefresh(); 
 
       if (!toast.isActive("error-toast")) {
         toast.error(getErrorMessage(error), { toastId: "error-toast" });

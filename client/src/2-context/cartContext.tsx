@@ -3,7 +3,9 @@ import { createContext, useState, useContext } from "react";
 type CartContextType = {
   cart: number | null,
   getCart: ( cartLength: number) =>void,
-  removeCart: ()=> void
+  removeCart: ()=> void,
+  refreshKey: number,
+  triggerRefresh: () => void
 };
 
 const CartContext = createContext<CartContextType | null>(null);
@@ -19,6 +21,10 @@ export const CartProvider = ({ children }: Props) => {
     return stored ? Number(stored) : null;
   });
 
+  const [refreshKey, setRefreshKey] = useState(0);
+
+  const triggerRefresh = () => setRefreshKey(prev => prev + 1);
+
   const getCart = (cartLength: number) => {
     setCart(cartLength);
     sessionStorage.setItem("cart", `${cartLength}`);
@@ -30,7 +36,7 @@ export const CartProvider = ({ children }: Props) => {
   };
 
   return (
-    <CartContext.Provider value={{ cart, getCart, removeCart}}>
+    <CartContext.Provider value={{ cart, getCart, removeCart, refreshKey, triggerRefresh}}>
       {children}
     </CartContext.Provider>
   );
