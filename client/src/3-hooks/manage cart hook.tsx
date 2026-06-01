@@ -6,36 +6,29 @@ import { getErrorMessage } from "../8-utils/error";
 import { toast } from "react-toastify";
 
 
-export function useManageCart() {
-  const { getCart, cart } = useCart();
-  const { role } = useAuth();
+export function useManageCart (){
+  const {getCart, cart} = useCart();
+  const {role} = useAuth();
   const navigate = useNavigate();
 
-  const handleClick = async (
-    path: string,
-    method: "post" | "patch" | "delete",
-    quantity: number
-  ) => {
-    if (role !== "Client") {
-      navigate("/login");
-      return;
-    }
+  const handleClick = async (path: string, method: "post" | "patch" | "delete", quantity: number) => {
+    try{
 
-    // ✅ Update UI immediately, don't wait for API
-    const previousCart = cart ?? 0;
-    getCart(previousCart + quantity);
+      if(role === 'Client') {
+        await api[method](path);
 
-    try {
-      await api[method](path);
+        getCart((cart ?? 0) + quantity);
+
+      } else {
+        navigate('/login');
+      }
+
     } catch (error) {
-      // ✅ Roll back on failure
-      getCart(previousCart);
-
-      if (!toast.isActive("error-toast")) {
-        toast.error(getErrorMessage(error), { toastId: "error-toast" });
+      if (!toast.isActive('error-toast')) {
+        toast.error(getErrorMessage(error), { toastId: 'error-toast'});
       }
     }
-  };
+  }
 
-  return { handleClick };
+  return {handleClick}
 }
