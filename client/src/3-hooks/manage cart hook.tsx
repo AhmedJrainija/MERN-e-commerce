@@ -24,10 +24,11 @@ export function useManageCart() {
     // ✅ Update UI immediately, don't wait for API
     const previousCart = cart ?? 0;
     getCart(previousCart + quantity);
-    triggerRefresh(); 
+   
 
     try {
       await api[method](path);
+      triggerRefresh(); 
     } catch (error) {
       // ✅ Roll back on failure
       getCart(previousCart);
