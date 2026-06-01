@@ -68,7 +68,6 @@ export function SendOrder() {
                   <Link to={`/product/${item._id}`} className={styles.imageWrapper}>
                     <img
                       src={item.pictureName}
-                      crossOrigin="use-credentials"
                       alt={item.productName}
                       className={styles.cartImage}
                     />

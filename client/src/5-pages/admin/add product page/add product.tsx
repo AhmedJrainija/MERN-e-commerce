@@ -36,7 +36,6 @@ export function AddProduct() {
                 <img
                   className={styles.image}
                   src={previewURL}
-                  crossOrigin="use-credentials"
                   alt={product.productName}
                 /> 
               :

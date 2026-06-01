@@ -58,7 +58,6 @@ export function ProductPage() {
               <img
                 className={styles.image}
                 src={data.pictureName}
-                crossOrigin="use-credentials"
                 alt={data.productName}
               />
             </div>

@@ -88,7 +88,6 @@ export function EditProduct() {
             <img
               className={styles.image}
               src={previewURL}
-              crossOrigin="use-credentials"
               alt={data?.productName}
             />
           </div>

@@ -69,7 +69,6 @@ export function Cart() {
                       <img
                         className={styles.image}
                         src={item.pictureName}
-                        crossOrigin="use-credentials"
                         alt={item.productName}
                       />
                     </Link>
