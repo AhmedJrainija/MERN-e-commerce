@@ -4,43 +4,31 @@ import { useAuth } from "../2-context/authContext";
 import { api } from "../6-services/api";
 import { getErrorMessage } from "../8-utils/error";
 import { toast } from "react-toastify";
-import { useState } from "react";
 
 
-export function useManageCart() {
-  const { getCart, cart } = useCart();
-  const { role } = useAuth();
+export function useManageCart (){
+  const {getCart, cart} = useCart();
+  const {role} = useAuth();
   const navigate = useNavigate();
-  const [click, setClick] = useState(0);
 
-  const handleClick = async (
-    path: string,
-    method: "post" | "patch" | "delete",
-    quantity: number
-  ) => {
-    if (role !== "Client") {
-      navigate("/login");
-      return;
-    }
+  const handleClick = async (path: string, method: "post" | "patch" | "delete", quantity: number) => {
+    try{
 
-    const previousCart = cart ?? 0;
+      if(role === 'Client') {
+        await api[method](path);
 
-    // Optimistic update — runs immediately, no waiting
-    getCart(previousCart + quantity);
+        getCart((cart ?? 0) + quantity);
 
-    setClick(prev => prev + 1);
+      } else {
+        navigate('/login');
+      }
 
-    try {
-      await api[method](path);
     } catch (error) {
-      // Revert on failure
-      getCart(previousCart);
-
-      if (!toast.isActive("error-toast")) {
-        toast.error(getErrorMessage(error), { toastId: "error-toast" });
+      if (!toast.isActive('error-toast')) {
+        toast.error(getErrorMessage(error), { toastId: 'error-toast'});
       }
     }
-  };
+  }
 
-  return { handleClick, click };
+  return {handleClick}
 }
