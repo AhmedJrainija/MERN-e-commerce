@@ -78,7 +78,6 @@ export function Home() {
                   <img
                     className={styles.image}
                     src={product.pictureName}
-                    crossOrigin="use-credentials"
                     alt={product.productName}
                   />
                 </Link>
