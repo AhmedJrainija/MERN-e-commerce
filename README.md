@@ -132,7 +132,6 @@ Backend API: [Live](https://mern-e-commerce-production-7599.up.railway.app)
 ## 🛠️ Tech Stack
 
 ### Frontend
-
 - React.js
 - TypeScript
 - React Router
@@ -140,18 +139,23 @@ Backend API: [Live](https://mern-e-commerce-production-7599.up.railway.app)
 - CSS Modules
 
 ### Backend
-
 - Node.js
 - Express.js
 - JWT
 - REST API
 
 ### Database
-
 - MongoDB
 
-### Other Tools
+### Storage
+- Cloudinary (image uploads)
 
+### Deployment
+- Vercel (frontend)
+- Railway (backend)
+- MongoDB Atlas (database)
+
+### Other Tools
 - Git
 - GitHub
 - Postman
