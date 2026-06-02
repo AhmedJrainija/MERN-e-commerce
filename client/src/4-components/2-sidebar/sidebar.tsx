@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ShoppingBag, ClipboardList, Plus, ShoppingCart, Menu, X, LogIn, House, UserPlus } from "lucide-react";
+import { ShoppingBag, ClipboardList, Plus, ShoppingCart, Menu, LogIn, House, UserPlus } from "lucide-react";
 import styles from "./Sidebar.module.css";
 import { useAuth } from "../../2-context/authContext";
 import { useCart } from "../../2-context/cartContext";
