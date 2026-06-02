@@ -203,9 +203,79 @@ body {
 }
 
 .link:hover {
-  color: #E8C3C5
+  color: #E8C3C5;
 }
 
 .link:active {
-  color: #E8C3C5
+  color: #E8C3C5;
+}
+
+/* ─── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .page {
+    padding: 0.75rem;
+  }
+
+  .inner {
+    gap: 1rem;
+  }
+
+  /* 1-column grid on phones */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .cardBody {
+    padding: 0.625rem 0.875rem 0.875rem;
+  }
+
+  .nameLink {
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .price {
+    font-size: 13px;
+  }
+
+  .addBtn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  /* Filter stretches full width on mobile */
+  .filterSelect {
+    max-width: 100%;
+    width: 100%;
+    font-size: 0.875rem;
+    /* Easier to tap */
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Bigger tap targets for pagination */
+  .pageBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pagination {
+    gap: 0.75rem;
+  }
+}
+
+/* ─── Tablet ─────────────────────────────────────────────── */
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .filterSelect {
+    max-width: 100%;
+  }
 }

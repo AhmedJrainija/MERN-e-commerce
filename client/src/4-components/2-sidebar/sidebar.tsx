@@ -23,9 +23,10 @@ export function SideBar() {
   return (
     <>
       {/* Mobile hamburger */}
+      {!open &&
       <button className={styles.toggleBtn} onClick={() => setOpen(o => !o)}>
-        {open ? <X size={20} strokeWidth={2} /> : <Menu size={20} strokeWidth={2} />}
-      </button>
+        <Menu size={30} strokeWidth={2} />
+      </button> }
 
       {/* Backdrop */}
       {open && <div className={styles.backdrop} onClick={() => setOpen(false)} />}
@@ -34,7 +35,7 @@ export function SideBar() {
         <nav className={`${styles.inner} ${open ? styles.open : ""}`}>
 
           <div className={styles.logoContainer}>
-            <Link to={'/'}>
+            <Link to={'/'} onClick={() => setOpen(false)}>
               <img src="/Logos/logo-light.svg" className={styles.logo}></img>
             </Link>
           </div>

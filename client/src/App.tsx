@@ -18,12 +18,13 @@ import { OrderPage } from "./5-pages/admin/admin order page/admin order";
 import { ClientOrderPage } from "./5-pages/client/client order page/client order page";
 import { OrdersByProduct } from "./5-pages/admin/product orders page/product orders";
 import { Profile } from "./5-pages/client/profile page/profile page";
+import styles from "./4-components/2-sidebar/Sidebar.module.css"
 
 function Side() {
   return (
     <>
       <SideBar />
-      <main style={{marginLeft: '250px' }}>
+      <main className={styles.main}>
         <Outlet />
       </main>
     </>
