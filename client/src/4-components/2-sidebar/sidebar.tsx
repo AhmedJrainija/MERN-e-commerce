@@ -44,7 +44,7 @@ export function SideBar() {
             <div className={styles.grid}>
               <button className={styles.card} onClick={() => go("/admin/products")}>
                 <div className={styles.cardIcon}><ShoppingBag size={20} strokeWidth={2} /></div>
-                <span className={styles.cardLabel}>Manage Products</span>
+                <span className={styles.cardLabel}>Products</span>
               </button>
               <button className={styles.card} onClick={() => go("/admin/add")}>
                 <div className={styles.cardIcon}><Plus size={20} strokeWidth={2} /></div>
