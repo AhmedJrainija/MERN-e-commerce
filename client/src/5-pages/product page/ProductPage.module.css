@@ -150,6 +150,10 @@
   .info {
     padding: 1.5rem;
   }
+
+  .title {
+    display: none
+  }
 }
 
 .title {
