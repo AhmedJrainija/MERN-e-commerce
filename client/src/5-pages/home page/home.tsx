@@ -9,8 +9,8 @@ import { api } from "../../6-services/api";
 import type { ApiResponse } from "../../7-types/response/response api";
 import { getErrorMessage } from "../../8-utils/error";
 import { Empty } from "../../4-components/6-empty component/empty";
-import { allowedCategories } from "../../4-components/5-forms/product form/product form";
 import { HomeSkeleton } from "./home skeleton";
+import { allowedCategories } from "../../4-components/5-forms/product form/product form";
 
 
 
