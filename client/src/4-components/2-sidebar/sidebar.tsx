@@ -12,8 +12,8 @@ export function SideBar() {
   const navigate = useNavigate();
   const { isAuth, role } = useAuth();
   const [open, setOpen] = useState(false);
-  const {cart} = useCart();
-  const {handleLogout} = useLogout();
+  const { cart } = useCart();
+  const { handleLogout } = useLogout();
 
   const go = (path: string) => {
     navigate(path);
@@ -22,11 +22,30 @@ export function SideBar() {
 
   return (
     <>
-      {/* Mobile hamburger */}
-      {!open &&
-      <button className={styles.toggleBtn} onClick={() => setOpen(o => !o)}>
-        <Menu size={30} strokeWidth={2} />
-      </button> }
+      {/* Mobile top header bar */}
+      <div className={styles.headerBar}>
+        <button className={styles.toggleBtn} onClick={() => setOpen(o => !o)}>
+          <Menu size={27} strokeWidth={3} color="#F5F0F4" />
+        </button>
+
+        <div className={styles.logoContainerHeader}>
+          <Link to="/" onClick={() => setOpen(false)}>
+            <img src="/Logos/logo-light.svg" className={styles.logoHeader} alt="Harmony logo" />
+          </Link>
+        </div>
+
+        <div
+          className={styles.cartIconHeader}
+          onClick={() => navigate('/cart')}
+          role="button"
+          aria-label="Go to cart"
+        >
+          <ShoppingCart size={27} strokeWidth={3} color="#F5F0F4" />
+          {cart !== null && cart >= 0 && (
+            <div className={styles.cartSize}>{cart}</div>
+          )}
+        </div>
+      </div>
 
       {/* Backdrop */}
       {open && <div className={styles.backdrop} onClick={() => setOpen(false)} />}
@@ -35,11 +54,11 @@ export function SideBar() {
         <nav className={`${styles.inner} ${open ? styles.open : ""}`}>
 
           <div className={styles.logoContainer}>
-            <Link to={'/'} onClick={() => setOpen(false)}>
-              <img src="/Logos/logo-light.svg" className={styles.logo}></img>
+            <Link to="/" onClick={() => setOpen(false)}>
+              <img src="/Logos/logo-light.svg" className={styles.logo} alt="Harmony logo" />
             </Link>
           </div>
-          
+
           {role === "Admin" && isAuth && (
             <div className={styles.grid}>
               <button className={styles.card} onClick={() => go("/admin/products")}>
@@ -89,22 +108,22 @@ export function SideBar() {
             </div>
           )}
 
-          {!isAuth &&
-          <div className={styles.grid}>
-            <button className={styles.card} onClick={() => go("/")}>
-              <div className={styles.cardIcon}><House size={20} strokeWidth={2} /></div>
-              <span className={styles.cardLabel}>Home</span>
-            </button>
-            <button className={styles.card} onClick={() => go("/login")}>
-              <div className={styles.cardIcon}><LogIn size={20} strokeWidth={2} /></div>
-              <span className={styles.cardLabel}>Login</span>
-            </button>
-            <button className={styles.card} onClick={() => go("/register")}>
-              <div className={styles.cardIcon}><UserPlus size={20} strokeWidth={2} /></div>
-              <span className={styles.cardLabel}>Register</span>
-            </button>
-          </div>
-          }
+          {!isAuth && (
+            <div className={styles.grid}>
+              <button className={styles.card} onClick={() => go("/")}>
+                <div className={styles.cardIcon}><House size={20} strokeWidth={2} /></div>
+                <span className={styles.cardLabel}>Home</span>
+              </button>
+              <button className={styles.card} onClick={() => go("/login")}>
+                <div className={styles.cardIcon}><LogIn size={20} strokeWidth={2} /></div>
+                <span className={styles.cardLabel}>Login</span>
+              </button>
+              <button className={styles.card} onClick={() => go("/register")}>
+                <div className={styles.cardIcon}><UserPlus size={20} strokeWidth={2} /></div>
+                <span className={styles.cardLabel}>Register</span>
+              </button>
+            </div>
+          )}
 
         </nav>
       </div>
