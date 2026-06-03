@@ -78,9 +78,15 @@
 }
 
 .link:hover {
-  color: #E8C3C5
+  color: #E8C3C5;
 }
 
 .link:active {
-  color: #E8C3C5
+  color: #E8C3C5;
+}
+
+@media (max-width: 600px) {
+  .title {
+    display: none;
+  }
 }

@@ -81,3 +81,11 @@
   color: #111111;
   margin: 0;
 }
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
