@@ -169,3 +169,17 @@
 .link:active {
   color: #E8C3C5
 }
+
+@media (max-width: 600px) {
+  .title {
+    display: none;
+  }
+
+  .filterSelect {
+    max-width: 100%;
+    width: 100%;
+    font-size: 0.875rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

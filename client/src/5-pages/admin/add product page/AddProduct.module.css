@@ -23,11 +23,13 @@
 .layout {
   display: grid;
   grid-template-columns: 45% 55%;
+  grid-template-areas: "image form";
   gap: 1.5rem;
   align-items: stretch;
 }
 
 .imageWrapper {
+  grid-area: image;
   border-radius: 14px;
   overflow: hidden;
   background: #F9F4F5;
@@ -46,6 +48,7 @@
 }
 
 .formColumn {
+  grid-area: form;
   display: flex;
   flex-direction: column;
 }
@@ -79,9 +82,27 @@
 }
 
 .link:hover {
-  color: #E8C3C5
+  color: #E8C3C5;
 }
 
 .link:active {
-  color: #E8C3C5
+  color: #E8C3C5;
+}
+
+@media (max-width: 600px) {
+  .title {
+    display: none;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "form"
+      "image";
+  }
+
+  .imageWrapper {
+    display: flex;
+    min-height: 220px;
+  }
 }
