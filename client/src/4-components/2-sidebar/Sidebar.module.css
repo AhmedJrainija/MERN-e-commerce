@@ -197,6 +197,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Geist', 'Segoe UI', sans-serif;
 }
 
 /* ── Sidebar logo ── */
