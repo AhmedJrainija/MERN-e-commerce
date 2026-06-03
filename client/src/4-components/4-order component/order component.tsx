@@ -22,10 +22,11 @@ export function OrderComponent(data: orderDTO) {
         <p className={styles.items}>
           {data.content?.map(item => (
             <span key={item.productName} className={styles.item}>
-              {item.productName} × {item.quantity} &nbsp;
+              <b>Content:</b> &nbsp;&nbsp;{item.productName} × {item.quantity} &nbsp;
             </span>
           ))}
         </p>
+        <div className={styles.dividerFooter} />
         <p className={styles.total}>Total: {data.total.toFixed(2)} MAD</p>
       </div>
     </div>

@@ -82,10 +82,22 @@
   margin: 0;
 }
 
+
+.dividerFooter{
+  display: none;
+}
+
+
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+
+  .dividerFooter {
+    height: 1px;
+    background: #E8C3C5;
+    display: block;
   }
 }
