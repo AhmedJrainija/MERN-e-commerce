@@ -225,12 +225,14 @@
 @media (max-width: 768px) {
   .main {
     margin-left: 0;
+    margin-top: 50px;
   }
 }
 
 @media (max-width: 600px) {
   .main {
     margin-left: 0;
+    margin-top: 50px;
   }
 }
 
