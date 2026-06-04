@@ -21,19 +21,19 @@ Backend API: [Live](https://mern-e-commerce-production-7599.up.railway.app)
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Client Login Page](./screenshots/client-login-page.png) | ![Client Login Page](./screenshots/client-login-page-phone.png) |
+| ![Client Login Page](./screenshots/client-login-page.png) | ![Client Login Page](./screenshots/client-login-page-phone.jpeg) |
 
 ### Register Page
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Register Page](./screenshots/register-page.png) | ![Register Page](./screenshots/register-page-phone.png) |
+| ![Register Page](./screenshots/register-page.png) | ![Register Page](./screenshots/register-page-phone.jpeg) |
 
 ### Admin Login Page
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Admin Login](./screenshots/admin-login-page.png) | ![Admin Login](./screenshots/admin-login-page-phone.png) |
+| ![Admin Login](./screenshots/admin-login-page.png) | ![Admin Login](./screenshots/admin-login-page-phone.jpeg) |
 
 
 ---
@@ -45,37 +45,37 @@ Backend API: [Live](https://mern-e-commerce-production-7599.up.railway.app)
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Home Page](./screenshots/home-page.png) | ![Home Page](./screenshots/home-page-phone.png) |
+| ![Home Page](./screenshots/home-page.png) | ![Home Page](./screenshots/home-page-phone.jpeg) |
 
 ### Product Details
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Product Details](./screenshots/product-page.png) | ![Product Details](./screenshots/product-page-phone.png) |
+| ![Product Details](./screenshots/product-page.png) | ![Product Details](./screenshots/product-page-phone.jpeg) |
 
 ### Edit Profile Page
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Edit Profile Page](./screenshots/edit-profile-page.png) | ![Edit Profile Page](./screenshots/edit-profile-page-phone.png) |
+| ![Edit Profile Page](./screenshots/edit-profile-page.png) | ![Edit Profile Page](./screenshots/edit-profile-page-phone.jpeg) |
 
 ### Cart
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Cart](./screenshots/cart-page.png) | ![Cart](./screenshots/cart-page-phone.png) |
+| ![Cart](./screenshots/cart-page.png) | ![Cart](./screenshots/cart-page-phone.jpeg) |
 
 ### Send Order Page
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Send Order Page](./screenshots/send-order-page.png) | ![Send Order Page](./screenshots/send-order-page-phone.png) |
+| ![Send Order Page](./screenshots/send-order-page.png) | ![Send Order Page](./screenshots/send-order-page-phone.jpeg) |
 
 ### Client Order Page
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Client Order Page](./screenshots/client-order-page.png) | ![Client Order Page](./screenshots/client-order-page-phone.png) |
+| ![Client Order Page](./screenshots/client-order-page.png) | ![Client Order Page](./screenshots/client-order-page-phone.jpeg) |
 
 
 ---
@@ -87,20 +87,19 @@ Backend API: [Live](https://mern-e-commerce-production-7599.up.railway.app)
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Edit Product Page](./screenshots/edit-product-page.png) | ![Edit Product Page](./screenshots/edit-product-page-phone.png) |
+| ![Edit Product Page](./screenshots/edit-product-page.png) | ![Edit Product Page](./screenshots/edit-product-page-phone.jpeg) |
 
 ### Add Product Page
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Add Product Page](./screenshots/add-product-page.png) | ![Add Product Page](./screenshots/add-product-page-phone.png) |
+| ![Add Product Page](./screenshots/add-product-page.png) | ![Add Product Page](./screenshots/add-product-page-phone.jpeg) |
 
 ### Admin Order Page
 
 | Desktop | Mobile |
 |---------|--------|
-| ![Admin Order Page](./screenshots/admin-order-page.png) | ![Admin Order Page](./screenshots/admin-order-page-phone.png) |
-
+| ![Admin Order Page](./screenshots/admin-order-page.png) | ![Admin Order Page](./screenshots/admin-order-page-phone.jpeg) |
 
 
 ---
