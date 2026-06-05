@@ -73,7 +73,7 @@ export function SideBar() {
                 <div className={styles.cardIcon}><ClipboardList size={20} strokeWidth={2} /></div>
                 <span className={styles.cardLabel}>Orders</span>
               </button>
-              <button className={styles.card} onClick={() => handleLogout()}>
+              <button className={styles.card} onClick={() => {handleLogout(); setOpen(false);}}>
                 <div className={styles.cardIcon}><LogIn size={20} strokeWidth={2} /></div>
                 <span className={styles.cardLabel}>Logout</span>
               </button>
@@ -101,7 +101,7 @@ export function SideBar() {
                 <div className={styles.cardIcon}><UserPen size={20} strokeWidth={2} /></div>
                 <span className={styles.cardLabel}>Edit Account</span>
               </button>
-              <button className={styles.card} onClick={() => handleLogout()}>
+              <button className={styles.card} onClick={() => {handleLogout(); setOpen(false);}}>
                 <div className={styles.cardIcon}><LogIn size={20} strokeWidth={2} /></div>
                 <span className={styles.cardLabel}>Logout</span>
               </button>
