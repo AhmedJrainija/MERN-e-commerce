@@ -5,17 +5,6 @@
   font-family: 'Geist', 'Segoe UI', sans-serif;
 }
 
-
-@media (max-width: 1024px) {
-  .page {
-    padding-left: 1rem;
-  }
-
-  .title {
-    font-size: 12px;
-  }
-}
-
 .inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -128,4 +117,14 @@
 
 .link:active {
   color: #E8C3C5
+}
+
+@media (max-width: 1024px) {
+  .page {
+    padding-left: 1rem;
+  }
+
+  .title {
+    font-size: 12px;
+  }
 }

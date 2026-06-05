@@ -50,16 +50,6 @@
   flex-direction: column;
 }
 
-@media (max-width: 1300px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .title {
-    font-size: 12px;
-  }
-}
-
 .toastBody {
   display: flex;
   flex-direction: column;
@@ -125,4 +115,14 @@
 
 .link:active {
   color: #E8C3C5
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 12px;
+  }
 }
