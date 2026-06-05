@@ -8,7 +8,6 @@ import { api } from "../../../6-services/api";
 import type { ApiResponse, ApiVoidResponse } from "../../../7-types/response/response api";
 import { getErrorMessage } from "../../../8-utils/error";
 import { ProductForm } from "../../../4-components/5-forms/product form/product form";
-import { ChevronRight } from "lucide-react";
 
 export function EditProduct() {
   const { productId } = useParams();
@@ -75,10 +74,8 @@ export function EditProduct() {
       <div className={styles.inner}>
 
         <h1 className={styles.title}>
-          <Link to={'/'} className={styles.link}>Home</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
-          <Link className={styles.link} to={'/admin/products'}>Manage Products</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
+          <Link to={'/'} className={styles.link}>Home</Link>&nbsp;/&nbsp;
+          <Link className={styles.link} to={'/admin/products'}>Manage Products</Link>&nbsp;/&nbsp;
           <Link className={styles.link} to={`/admin/product/${data?._id}`}>Edit {data?.productName}</Link>
         </h1>
 

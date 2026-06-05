@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ChevronRight, Minus, Plus, X } from "lucide-react";
+import { Minus, Plus, X } from "lucide-react";
 import styles from "./CartPage.module.css";
 import { toast } from "react-toastify";
 import type { ProductDTO } from "../../../7-types/dto/productDTO";
@@ -44,8 +44,7 @@ export function Cart() {
       <div className={styles.inner}>
 
         <h1 className={styles.title}>
-          <Link to={'/'} className={styles.link}>Home</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
+          <Link to={'/'} className={styles.link}>Home</Link>&nbsp;/&nbsp;
           <Link className={styles.link} to={'/cart'}>Cart</Link>
         </h1>
 

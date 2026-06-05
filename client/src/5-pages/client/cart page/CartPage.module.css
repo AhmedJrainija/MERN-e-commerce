@@ -16,7 +16,7 @@
 .title {
   font-size: 20px;
   font-weight: 600;
-  color: #111111;
+  color: #C9989B;
   margin: 0;
 }
 
@@ -326,7 +326,7 @@
   }
 
   .title {
-    display: none;
+    font-size: 12px;
   }
 }
 

@@ -11,7 +11,6 @@ import { useCart } from "../../../2-context/cartContext";
 import { calculateTotal } from "../../../8-utils/total";
 import { Link } from "react-router-dom";
 import { SendOrderSkeleton } from "./send order skeleton";
-import { ChevronRight } from "lucide-react";
 
 export function SendOrder() {
   const { order, setOrder, handleSubmit } = useOrderForm();
@@ -54,10 +53,8 @@ export function SendOrder() {
     <div className={styles.page}>
       <div className={styles.inner}>
         <h1 className={styles.title}>
-          <Link to={'/'} className={styles.link}>Home</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
-          <Link className={styles.link} to={'/cart'}>Cart</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
+          <Link to={'/'} className={styles.link}>Home</Link>&nbsp;/&nbsp;
+          <Link className={styles.link} to={'/cart'}>Cart</Link>&nbsp;/&nbsp;
           <Link className={styles.link} to={'/cart/order'}>Send Order</Link>
         </h1>
         <div className={styles.panels}>

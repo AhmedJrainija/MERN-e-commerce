@@ -87,6 +87,6 @@
 
 @media (max-width: 1024px) {
   .title {
-    display: none;
+    font-size: 20px;
   }
 }

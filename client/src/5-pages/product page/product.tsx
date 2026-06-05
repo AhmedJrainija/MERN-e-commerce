@@ -10,7 +10,6 @@ import { api } from "../../6-services/api";
 import type { ApiResponse } from "../../7-types/response/response api";
 import { getErrorMessage } from "../../8-utils/error";
 import { ProductPageSkeleton } from "./product skeleton";
-import { ChevronRight } from 'lucide-react';
 
 
 export function ProductPage() {
@@ -46,8 +45,7 @@ export function ProductPage() {
       <div className={styles.inner}>
 
         <h1 className={styles.title}>
-          <Link to={'/'} className={styles.link}>Home</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
+          <Link to={'/'} className={styles.link}>Home</Link>&nbsp;/&nbsp;
           <Link className={styles.link} to={`/product/${data?._id}`}>{data?.productName}</Link>
         </h1>
 

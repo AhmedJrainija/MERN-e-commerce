@@ -51,8 +51,7 @@ export function ProductsAdmin() {
       <div className={styles.inner}>
 
         <h1 className={styles.title}>
-          <Link to={'/'} className={styles.link}>Home</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
+          <Link to={'/'} className={styles.link}>Home</Link>&nbsp;/&nbsp;
           <Link className={styles.link} to={'/admin/products'}>Manage Products</Link>
         </h1>
 

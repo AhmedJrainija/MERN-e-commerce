@@ -7,7 +7,6 @@ import { toast, type Id } from "react-toastify";
 import { getErrorMessage } from "../../../8-utils/error";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ClientOrderPageSkeleton } from "./client order skeleton";
-import { ChevronRight } from "lucide-react";
 
 export function ClientOrderPage() {
   const [data, setData] = useState<orderDTO>();
@@ -75,10 +74,8 @@ export function ClientOrderPage() {
     <div className={styles.page}>
       <div className={styles.inner}>
         <h1 className={styles.title}>
-          <Link to={'/'} className={styles.link}>Home</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
-          <Link className={styles.link} to={'/orders'}>Orders</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
+          <Link to={'/'} className={styles.link}>Home</Link>&nbsp;/&nbsp;
+          <Link className={styles.link} to={'/orders'}>Orders</Link>&nbsp;/&nbsp;
           <Link className={styles.link} to={`/orders/${data?._id}`}>Order</Link>
         </h1>
         {data&&

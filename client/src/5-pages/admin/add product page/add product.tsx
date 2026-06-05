@@ -4,7 +4,7 @@ import { getErrorMessage } from "../../../8-utils/error";
 import { ProductForm } from "../../../4-components/5-forms/product form/product form";
 import styles from "./AddProduct.module.css"
 import { useState } from "react";
-import { ChevronRight, ImageIcon } from "lucide-react";
+import { ImageIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function AddProduct() {
@@ -25,8 +25,7 @@ export function AddProduct() {
     <div className={styles.page}>
       <div className={styles.inner}>
         <h1 className={styles.title}>
-          <Link to={'/'} className={styles.link}>Home</Link>
-          <ChevronRight style={{color:'#C9989B', verticalAlign: 'middle'}} strokeWidth={2} size={25}></ChevronRight>
+          <Link to={'/'} className={styles.link}>Home</Link>&nbsp;/&nbsp;
           <Link className={styles.link} to={'/admin/add'}>Add Product</Link>
         </h1>
 
