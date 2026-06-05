@@ -5,7 +5,7 @@ export function NotFound() {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        <img src="/Logos/favicon.svg" className={styles.image} />
+        <img src="/favicon.svg" className={styles.image} />
         <h1 className={styles.title}>{message}</h1>
         <p className={styles.subtitle}>We can't seem to find the page you are looking for.</p>
         <button

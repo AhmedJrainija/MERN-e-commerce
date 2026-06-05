@@ -16,7 +16,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .card {
@@ -170,7 +170,7 @@
   color: #E8C3C5
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .title {
     display: none;
   }

@@ -118,7 +118,7 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 640px) {
+@media (max-width: 1300px) {
   .imagePanel {
     display: none;
   }

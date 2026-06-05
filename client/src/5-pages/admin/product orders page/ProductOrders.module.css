@@ -5,13 +5,8 @@
   font-family: 'Geist', 'Segoe UI', sans-serif;
 }
 
-@media (max-width: 1024px) {
-  .page {
-    padding-left: calc(64px + 1rem);
-  }
-}
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .page {
     padding-left: 1rem;
   }

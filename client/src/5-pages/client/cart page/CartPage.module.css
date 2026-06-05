@@ -279,7 +279,7 @@
   transform: scale(0.99);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .layout {
     grid-template-columns: 1fr;
   }

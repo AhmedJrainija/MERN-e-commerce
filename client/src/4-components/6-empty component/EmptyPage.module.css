@@ -32,3 +32,10 @@
   line-height: 1.1;
   opacity: 0.5;
 }
+
+@media (max-width: 1300px) {
+  .image{
+    width: 200px;
+    height: 200px;
+  }
+}

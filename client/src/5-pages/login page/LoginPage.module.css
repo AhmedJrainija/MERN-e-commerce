@@ -168,7 +168,7 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .imagePanel {
     display: none;
   }
@@ -178,8 +178,10 @@
   }
 
   .root {
-    align-items: flex-start;
+    align-items: center;
     padding-top: 1.5rem;
+    height: 100vh;
+    overflow: hidden;
   }
 }
 
